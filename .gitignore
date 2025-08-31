@@ -23,9 +23,10 @@
 hs_err_pid*
 replay_pid*
 
-.vscode/
-.useful-info.txt/
-.target/
-.allure-report/
-.allure-results/
-.allure/
+.vscode/** */
+useful-info.txt/** */
+target/** */
+.idea/** */
+allure-report/** */
+allure-results/** */
+.allure/** */
