@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Multi Group Suite" verbose="1">
+    <groups>
+        <run>
+            <include name="CreateAnEmptyCart"/>
+            <include name="AddProductToTheCart"/>
+        </run>
+    </groups>
+    <packages>
+        <package name="com.learn.restassured.products"/>
+        <package name="com.learn.restassured.cart"/>
+        <package name="com.learn.restassured.order"/>
+    </packages>
+</suite>

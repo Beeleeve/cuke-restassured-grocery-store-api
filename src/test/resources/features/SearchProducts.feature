@@ -1,0 +1,31 @@
+Feature: Grocery Store Products API - Search/Filter Products
+  # ----------------- Filter by Category Scenarios -----------------
+
+  Scenario Outline: Get products by category with optional filters
+    Given I want to browse products in grocery store
+    When I filter products by category "<category>"
+    Then I get products matching the category
+
+    Examples:
+      | category      |
+      | coffee        |
+      | candy         |
+      | bread-bakery  |
+      | dairy         |
+      | meat-seafood  |
+      | fresh-produce |
+  # ----------------- Filter by Product ID Scenarios -----------------
+
+  Scenario Outline: Get product by Product ID
+    Given I want to browse products in grocery store
+    When I filter products by product ID "<productID>"
+    Then I get the product details for that product ID
+
+    Examples:
+      | productID |
+      |      5774 |
+      |      7395 |
+      |      5851 |
+      |      5478 |
+      |      3674 |
+      |      4875 |
