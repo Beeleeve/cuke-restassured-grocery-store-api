@@ -28,7 +28,7 @@ Note: These are example tests, not production code tests
 ```
 #### Maven command to run a Cucumber runner file in terminal
 ```bash
-mvn clean test -Dtest="com.learn.restassured.runners.RunCucumberTest"
+mvn clean test -Dtest="com.grocerystore.api.runners.RunCucumberTest"
 ```
 ### Test reports
 

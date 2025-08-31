@@ -3,20 +3,17 @@ Feature: Grocery Store Products API - Search/Filter Products
 
   Scenario Outline: Get products by category with optional filters
     Given I want to browse products in grocery store
-    When I filter products by category "<category>" with params
-      | results | <results> |
-      | inStock | <inStock> |
+    When I filter products by category "<category>"
     Then I get products matching the category
 
     Examples:
-      | category      | results | inStock |
-      | coffee        |       3 | true    |
-      | candy         |       5 | true    |
-      | bread-bakery  |       2 | false   |
-      | dairy         |       4 | true    |
-      | meat-seafood  |       3 | true    |
-      | fresh-produce |       5 | false   |
-      
+      | category      |
+      | coffee        |
+      | candy         |
+      | bread-bakery  |
+      | dairy         |
+      | meat-seafood  |
+      | fresh-produce |
   # ----------------- Filter by Product ID Scenarios -----------------
 
   Scenario Outline: Get product by Product ID

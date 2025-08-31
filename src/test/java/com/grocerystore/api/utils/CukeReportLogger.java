@@ -7,11 +7,11 @@ import io.restassured.response.Response;
 import io.restassured.specification.FilterableRequestSpecification;
 import io.restassured.specification.FilterableResponseSpecification;
 
-public class CustomLoggingFilter implements Filter {
+public class CukeReportLogger implements Filter {
 
         private final Scenario scenario;
 
-        public CustomLoggingFilter(Scenario scenario) {
+        public CukeReportLogger(Scenario scenario) {
                 this.scenario = scenario;
         }
 

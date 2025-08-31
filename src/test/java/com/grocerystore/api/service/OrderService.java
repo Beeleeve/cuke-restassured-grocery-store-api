@@ -1,23 +1,22 @@
-package com.grocerystore.api.steps;
+package com.grocerystore.api.service;
 
 import java.util.List;
 import java.util.Map;
 
-import com.grocerystore.api.utils.CustomLoggingFilter;
-
+import com.grocerystore.api.core.SpecFactory;
+import io.cucumber.java.Scenario;
 import io.restassured.response.Response;
-import static io.restassured.RestAssured.given;
 
-public class OrderHelper {
-    private final ScenarioContext scenarioContext;
+public class OrderService {
 
-    public OrderHelper(ScenarioContext scenarioContext) {
-        this.scenarioContext = scenarioContext;
+    private Scenario scenario;
+
+    public OrderService(Scenario scenario) {
+        this.scenario = scenario;
     }
 
     public Response placeOrderRequest(String token, Map<String, Object> payload) {
-        return given()
-                .filter(new CustomLoggingFilter(Hooks.getScenario()))
+        return SpecFactory.createBaseSpec(scenario)
                 .header("Authorization", "Bearer " + token)
                 .contentType("application/json")
                 .body(payload)
@@ -29,9 +28,8 @@ public class OrderHelper {
                 .response();
     }
 
-    public List<Map<String, Object>> getOrderItemsRequest(String orderId, String token) {
-        return given()
-                .filter(new CustomLoggingFilter(Hooks.getScenario()))
+    public Response getOrderItemsRequest(String orderId, String token) {
+        return SpecFactory.createBaseSpec(scenario)
                 .header("Authorization", "Bearer " + token)
                 .contentType("application/json")
                 .when()
@@ -39,6 +37,6 @@ public class OrderHelper {
                 .then()
                 .statusCode(200)
                 .extract()
-                .response().jsonPath().getList("items");
+                .response();
     }
 }
