@@ -1,0 +1,8 @@
+https://github.com/rest-assured/rest-assured/wiki/Usage
+
+https://github.com/rest-assured/rest-assured/blob/master/json-path/src/test/java/io/restassured/path/json/JsonPathTest.java#L99
+
+https://github.com/rest-assured/rest-assured/blob/master/examples/rest-assured-itest-java/src/test/java/io/restassured/itest/java/ContentTypeITest.java
+
+JSON to Java Object:
+https://www.jsonschema2pojo.org/
