@@ -67,6 +67,7 @@ public class TokenManager {
                 "clientEmail", clientEmail);
 
         return SpecFactory.createBaseSpec(scenario)
+                .contentType("application/json")
                 .body(payload)
                 .when()
                 .post(Endpoint.REGISTER_API_CLIENT.getPath())
