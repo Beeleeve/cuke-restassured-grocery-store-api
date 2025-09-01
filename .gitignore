@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 .vscode/
-useful-info.txt/
+useful-info.txt
 target/
 .idea/
 allure-report/
