@@ -72,7 +72,7 @@ public class TokenManager {
                 .when()
                 .post(Endpoint.REGISTER_API_CLIENT.getPath())
                 .then()
-                .statusCode(200)
+                .statusCode(201)
                 .extract()
                 .response().jsonPath().getString("accessToken");
     }
