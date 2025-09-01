@@ -1,9 +1,11 @@
 # Compiled class file
 *.class
-.vscode/** */
-useful-info.txt/** */
-target/** */
-.idea/** */
-allure-report/** */
-allure-results/** */
+.vscode/
+useful-info.txt/
+target/
+.idea/
+allure-report/
+allure-results/
 .allure/
+token.txt
+temp.txt
